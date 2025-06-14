@@ -16,29 +16,13 @@
     </n-flex>
     <n-flex :size="4" class="text" align="center" vertical>
       <n-p depth="3">
-        <n-text depth="3" @click="jumpLink(linkData.github)">
-          SiteStatus
-        </n-text>
-        Version {{ version }}
-      </n-p>
-      <n-p depth="3">
-        {{ $t("footer.basedOn") }}
-        <n-text depth="3" @click="jumpLink('https://uptimerobot.com/')">
-          {{ $t("uptimeRobot") }}
-        </n-text>
-        {{ $t("footer.interface") }} |
-        {{ $t("footer.checkFrequency") }}
-        {{ $t("footer.fiveMinutes") }}
-      </n-p>
-      <n-p depth="3">
-        Copyright &copy; 2020 - {{ new Date().getFullYear() }}
-        <n-text depth="3" @click="jumpLink(linkData.home)"> IMSYY </n-text>
+        Copyright &copy; 2020 - {{ new Date().getFullYear() }} Flyfish Studio |
         <n-text
           v-if="siteIcp"
           depth="3"
           @click="jumpLink('https://beian.miit.gov.cn/')"
         >
-          | {{ siteIcp }}
+          {{ siteIcp }}
         </n-text>
       </n-p>
     </n-flex>
@@ -50,9 +34,9 @@ const { public: configPublic } = useRuntimeConfig();
 const { siteIcp, version } = configPublic;
 
 const linkData = {
-  github: "https://github.com/imsyy/site-status",
-  home: "https://www.imsyy.top",
-  email: "mailto:one@imsyy.top",
+  github: "https://github.com/flyfishxu/wearosbox-service-status",
+  home: "https://wearosbox.com",
+  email: "contact@wearosbox.com",
 };
 </script>
 
